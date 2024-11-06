@@ -15,7 +15,7 @@ print('')
 
 print('')
 
-print('Welcome in JIMG-analyst-tool v.0.0.4 library')
+print('Welcome in JIMG-analyst-tool v.0.0.5 library')
 print('')
 print('Loading required packages...')
 

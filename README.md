@@ -146,7 +146,7 @@ With these combined functionalities, the JIMG_analyst_tool is a versatile resour
 #### In command line write:
 
 ```
-pip install JIMG-analyst-tool>=0.0.4
+pip install JIMG-analyst-tool>=0.0.5
 ```
 
 
