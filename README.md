@@ -791,7 +791,13 @@ nf.get_results_nuclei_chromatinization()
 ##### 2.7.1 Find nuclei on image series <a id="fnis"></a>
 
 ```
-nf.series_analysis_nuclei(path_to_images, file_extension = 'tiff', selected_id = [], fille_name_part = '', selection_opt = True, include_img = True, test_series = 0)
+nf.series_analysis_nuclei(path_to_images, 
+                          file_extension = 'tiff', 
+                          selected_id = [], 
+                          fille_name_part = '', 
+                          selection_opt = True, 
+                          include_img = True, 
+                          test_series = 0)
 ```
 
     This method performs analysis on the image provided by the input_image() method on default or set bu user parameters.
@@ -838,7 +844,13 @@ nf.series_analysis_nuclei(path_to_images, file_extension = 'tiff', selected_id =
 ##### 2.7.2 Find nuclei chromatinization on image series <a id="fncis"></a>
 
 ```
-nf.series_analysis_chromatinization(path_to_images, file_extension = 'tiff', selected_id = [], fille_name_part = '', selection_opt = True, include_img = True, test_series = 0)
+nf.series_analysis_chromatinization(path_to_images, 
+                                    file_extension = 'tiff', 
+                                    selected_id = [], 
+                                    fille_name_part = '', 
+                                    selection_opt = True, 
+                                    include_img = True, 
+                                    test_series = 0)
 ```
 
     This method performs analysis on the image provided by the input_image() method on default or set bu user parameters.
@@ -922,8 +934,7 @@ ndm.save_nuclei_results(path = os.getcwd(), data = {}, id_name = 'name')
 
 
 ```
-ndm.select_nuclei_data(path_to_results = os.getcwd(), 
-                       data_sets = [])
+ndm.select_nuclei_data(path_to_results = os.getcwd(), data_sets = [])
 ```
 
     Loads and selects nuclei (nuclei parameters and / or chromatinization parameters) data from results files for each data set, processes it, and stores it in mutual_data.
@@ -1088,9 +1099,7 @@ ga = GroupAnalysis()
 
 
 ```
-ga.load_data(path,
-          ids_col = 'id_name', 
-          set_col = 'set')
+ga.load_data(path, ids_col = 'id_name', set_col = 'set')
 ```
 
     Load and preprocess data from a CSV file, storing both the data and metadata in the instance attributes.
@@ -1239,9 +1248,7 @@ ga.get_knee_plot()
 
 
 ```
-ga.save_knee_plot(path = os.getcwd(),
-               name = '', 
-               extension = 'svg')
+ga.save_knee_plot(path = os.getcwd(), name = '', extension = 'svg')
 ```
 
     Retrieve the knee plot of cumulative explained variance from the var_plot() method.
@@ -1266,10 +1273,10 @@ ga.save_knee_plot(path = os.getcwd(),
 
 ```
 ga.UMAP(PC_num = 5,
-     factorize_with_metadata = True, 
-     n_neighbors = 25,
-     min_dist = 0.01,
-     n_components =2)
+        factorize_with_metadata = True, 
+        n_neighbors = 25,
+        min_dist = 0.01,
+        n_components = 2)
 ```
 
     Perform UMAP (Uniform Manifold Approximation and Projection) dimensionality reduction on the PCA results.
@@ -1326,9 +1333,7 @@ ga.get_UMAP_plots(show = True)
 
 
 ```
-ga.save_UMAP_plots(path = os.getcwd(),
-                name = '', 
-                extension = 'svg')
+ga.save_UMAP_plots(path = os.getcwd(), name = '', extension = 'svg')
 ```
 
      Save the UMAP plots to a specified directory from UMAP() and / or UMAP_on_clusters() methods.
@@ -1353,8 +1358,7 @@ ga.save_UMAP_plots(path = os.getcwd(),
 
 
 ```
-ga.db_scan(eps = 0.5,
-        min_samples = 10)
+ga.db_scan(eps = 0.5, min_samples = 10)
 ```
 
     Perform DBSCAN clustering on the UMAP-transformed data.
@@ -1419,9 +1423,7 @@ ga.get_UMAP_plots(show = True)
 
 
 ```
-ga.save_UMAP_plots(path = os.getcwd(),
-                name = '', 
-                extension = 'svg')
+ga.save_UMAP_plots(path = os.getcwd(), name = '', extension = 'svg')
 ```
 
      Save the UMAP plots to a specified directory from UMAP() and / or UMAP_on_clusters() methods.
@@ -1478,9 +1480,7 @@ ga.groups
 
 
 ```
-ga.DFA(meta_group_by = 'sets',
-    sets = {}, 
-    n_proc = 5)
+ga.DFA(meta_group_by = 'sets', sets = {}, n_proc = 5)
 ```
 
     Perform Differential Feature Analysis (DFA) on specified data groups.
@@ -1834,10 +1834,10 @@ fi.get_results()
 
 ```
 fi.save_results(path = os.getcwd(), 
-             mask_region = '', 
-             feature_name = '', 
-             individual_number = 0, 
-             individual_name = '')
+                mask_region = '', 
+                feature_name = '', 
+                individual_number = 0, 
+                individual_name = '')
 ```
 
     This method saves the results from the `run_calculations()` method in dictionary format to a *.json file.
@@ -1945,8 +1945,7 @@ ia.drop_up_df(data, group_col, values_col)
 <br />
 
 ```
-ia.percentiles_calculation(values, 
-                        sep_perc = 1)
+ia.percentiles_calculation(values, sep_perc = 1)
 ```
 
     Calculates percentiles for a given set of values with a specified separation interval. 
@@ -2263,7 +2262,7 @@ nf.browser_test()
 
 <br/>
 
-[Browse Raport](examples/Microscope_nuclei/nms_prob_test.html)
+[Browse Raport](https://htmlpreview.github.io/?https://raw.githubusercontent.com/jkubis96/JIMG-analyst-tool/refs/heads/main/examples/Microscope_nuclei/nms_prob_test.html)
 
 <br/>
 
@@ -2548,7 +2547,7 @@ data = ndm.get_mutual_data()
 ##### Data table with series nuclei chromatinization results:
 
 <p align="center">
-<img  src="examples/Microscope_nuclei/data_table_results.bmp" alt="drawing" width="600" />
+<img  src="examples/Microscope_nuclei/data_table_results.bmp" alt="drawing" width="700" />
 </p>
 
 
@@ -2587,7 +2586,7 @@ nf.browser_test()
 
 <br/>
 
-[Browse Raport](examples/FlowCytometry_nuclei/nms_prob_test.html)
+[Browse Raport](https://htmlpreview.github.io/?https://raw.githubusercontent.com/jkubis96/JIMG-analyst-tool/refs/heads/main/examples/FlowCytometry_nuclei/nms_prob_test.html)
 
 <br/>
 
@@ -2885,7 +2884,7 @@ data = ndm.get_mutual_IS_data()
 ##### Data table showing chromatinization results for nuclear series across both concatenated experiments:
 
 <p align="center">
-<img  src="examples/FlowCytometry_nuclei/data_table_results.bmp" alt="drawing" width="600" />
+<img  src="examples/FlowCytometry_nuclei/data_table_results.bmp" alt="drawing" width="700" />
 </p>
 
 <br/>
@@ -2990,7 +2989,7 @@ ga.UMAP(PC_num = 15,
      factorize_with_metadata = True, 
      n_neighbors = 25,
      min_dist = 0.01,
-     n_components =2)
+     n_components = 2)
 
 
 # get UMAP_data, if required
@@ -3296,7 +3295,7 @@ results = ia.hist_compare_plot(data = data,
 <br/>
 
 ```
-results.savefig('example_results.svg', format='svg', dpi=300, bbox_inches='tight')
+results.savefig('example_results.svg', format = 'svg', dpi = 300, bbox_inches = 'tight')
 ```
 
 <br />
